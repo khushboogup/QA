@@ -4,7 +4,7 @@ from openai import OpenAI
 # Initialize client (Hugging Face as backend)
 client = OpenAI(
     base_url="https://router.huggingface.co/v1",
-    api_key="api_key",  # replace with your HF token
+    api_key=st.secrests["api_key"],  # replace with your HF token
 )
 
 def qa_analyst_agent(question: str):
