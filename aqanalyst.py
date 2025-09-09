@@ -4,7 +4,7 @@ from openai import OpenAI
 # Initialize client (Hugging Face as backend)
 client = OpenAI(
     base_url="https://router.huggingface.co/v1",
-    api_key=st.secrets["api_key"],  # replace with your HF token
+    api_key="api_key",  # replace with your HF token
 )
 
 def qa_analyst_agent(question: str):
@@ -33,7 +33,7 @@ st.title("🕵️ QA Analyst AI Agent")
 st.write("Ask questions and get answers as if you were talking to a QA Analyst.")
 
 # Input box
-user_input = st.text_input("Enter your question:", placeholder="e.g., search link is not working?")
+user_input = st.text_area("Enter your question:", placeholder="e.g., search link is not working?",height=150)
 
 if st.button("Ask"):
     if user_input.strip():
@@ -43,5 +43,6 @@ if st.button("Ask"):
         st.write(answer)
     else:
         st.warning("Please enter a question.")
+
 
 
