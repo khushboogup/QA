@@ -1,2 +1,12 @@
 streamlit 
 openai
+torch 
+torchvision --index-url https://download.pytorch.org/whl/cu118  
+pillow
+transformers==4.56.1
+Pillow
+requests
+accelerate
+timm
+tokenizers
+
